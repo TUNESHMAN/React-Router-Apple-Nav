@@ -1,13 +1,23 @@
 import React from "react";
+import { Route, Link } from "react-router-dom";
 
-function Music() {
+function Music({ match }) {
+
   return (
     <div>
       <ul>
-        <li>Blues</li>
-        <li>Rap</li>
-        <li>Country</li>
-        <li>Pop</li>
+        <Link to={`${match.url}/blues`}>
+          <li>Blues</li>
+        </Link>
+        <Link to={`${match.url}/rap`}>
+          <li>Rap</li>
+        </Link>
+        <Link to={`${match.url}/country`}>
+          <li>Country</li>
+        </Link>
+        <Link to={`${match.url}/pop`}>
+          <li>Pop</li>
+        </Link>
       </ul>
     </div>
   );
